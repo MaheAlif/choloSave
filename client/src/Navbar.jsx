@@ -71,14 +71,14 @@ const Navbar = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      <NavLink to="myGroups" className="block px-4 py-2 hover:bg-gray-100">
                         <div className="font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
                           My groups
                         </div>
                         <span className="text-sm text-gray-500">
                           See the details of your created groups
                         </span>
-                      </a>
+                      </NavLink>
                     </li>
                   </ul>
                 </div>
