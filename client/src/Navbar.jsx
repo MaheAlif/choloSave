@@ -61,14 +61,14 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      <NavLink to="joinedGroups" className="block px-4 py-2 hover:bg-gray-100">
                         <div className="font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
                           View Groups
                         </div>
                         <span className="text-sm text-gray-500">
                           View details of your groups
                         </span>
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
                       <NavLink to="myGroups" className="block px-4 py-2 hover:bg-gray-100">

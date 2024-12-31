@@ -9,6 +9,7 @@ import Register from "./Register.jsx";
 import CreateGroup from "./Group/CreateGroup.jsx";
 import { ThemeProvider } from "@material-tailwind/react";
 import MyGroups from "./Group/MyGroups.jsx";
+import JoinedGroups from "./Group/JoinedGroups.jsx";
 
 const root = document.getElementById("root");
 
@@ -23,6 +24,7 @@ ReactDOM.createRoot(root).render(
           <Route path="register" element={<Register></Register>} />
           <Route path="createGroup" element={<CreateGroup></CreateGroup>} />
           <Route path="myGroups" element={<MyGroups></MyGroups>} />
+          <Route path="joinedGroups" element={<JoinedGroups></JoinedGroups>} />
         </Route>
       </Routes>
     </BrowserRouter>
