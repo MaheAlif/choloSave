@@ -4,10 +4,6 @@ import CholoSaveLogo from "/CholoSaveLogo4.png";
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState(null);
-  const [groups, setGroups] = useState(false);
-  const [savings, setSavings] = useState(false);
-  const [investments, setInvestments] = useState(false);
-  const [community, setCommunity] = useState(false);
 
   const handleMouseEnter = (item) => {
     setActiveItem(item);
@@ -55,14 +51,14 @@ const Navbar = () => {
                 className="absolute left-0 mt-2 w-64 bg-white border shadow-lg rounded-lg">
                   <ul className="py-2">
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      <NavLink to="createGroup" className="block px-4 py-2 hover:bg-gray-100">
                         <div className="font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
                           Create Group
                         </div>
                         <span className="text-sm text-gray-500">
                           Create your group to connect with people
                         </span>
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
                       <a href="#" className="block px-4 py-2 hover:bg-gray-100">
@@ -263,7 +259,7 @@ const Navbar = () => {
             <div className="w-10 rounded-full">
               <img
                 alt="Tailwind CSS Navbar component"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                src="https://avatars.githubusercontent.com/u/107747218?v=4"
               />
             </div>
           </div>
