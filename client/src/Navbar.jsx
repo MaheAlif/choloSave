@@ -1,0 +1,203 @@
+import React from "react";
+import { NavLink } from "react-router";
+
+const Navbar = () => {
+  return (
+    <>
+      <div className="navbar bg-slate-100">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 gap-2 shadow"
+            >
+              {/* Group */}
+              <details className="px-2 border border-red-500">
+                <summary>Group</summary>
+                <ul className="p-2 border-2 border-green-500">
+                  <li>
+                    <a className=" lg:px-3 lg:py-2 bg-transparent  hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                      My Group
+                    </a>
+                  </li>
+                  <li>
+                    <a className=" lg:px-3 lg:py-2 bg-transparent hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                      View Groups
+                    </a>
+                  </li>
+                  <li>
+                    <a className=" lg:px-3 lg:py-2 bg-transparent hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                      Create Group
+                    </a>
+                  </li>
+                </ul>
+              </details>
+
+              {/* Savings */}
+              <details>
+                <summary>Savings</summary>
+                <ul className="p-2 border-2 border-green-500">
+                  <li>
+                    <a className=" lg:px-3 lg:py-2 bg-transparent  hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                      My contribution
+                    </a>
+                  </li>
+                  <li>
+                    <a className=" lg:px-3 lg:py-2 bg-transparent hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                      View withdrawls
+                    </a>
+                  </li>
+                </ul>
+              </details>
+
+              {/* Investments */}
+              <details>
+                <summary>Savings</summary>
+                <ul className="p-2 border-2 border-green-500">
+                  <li>
+                    <a className=" lg:px-3 lg:py-2 bg-transparent  hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <a className=" lg:px-3 lg:py-2 bg-transparent hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                      AI tips
+                    </a>
+                  </li>
+                </ul>
+              </details>
+
+              {/* Community */}
+              <details>
+                <summary>Savings</summary>
+                <ul className="p-2 border-2 border-green-500">
+                  <li>
+                    <a className=" lg:px-3 lg:py-2 bg-transparent  hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                      Leaderboard
+                    </a>
+                  </li>
+                  <li>
+                    <a className=" lg:px-3 lg:py-2 bg-transparent hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                      Forum
+                    </a>
+                  </li>
+                </ul>
+              </details>
+            </ul>
+          </div>
+          <NavLink to="" className="btn btn-ghost text-xl lg:text-3xl">
+            CholoSave
+          </NavLink>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="flex gap-4 px-2">
+            {/* Group */}
+            <details className="px-2 border border-red-500">
+              <summary>Group</summary>
+              <ul className="p-2 border-2 border-green-500">
+                <li>
+                  <a className=" lg:px-3 lg:py-2 bg-transparent  hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                    My Group
+                  </a>
+                </li>
+                <li>
+                  <a className=" lg:px-3 lg:py-2 bg-transparent hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                    View Groups
+                  </a>
+                </li>
+                <li>
+                  <a className=" lg:px-3 lg:py-2 bg-transparent hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                    Create Group
+                  </a>
+                </li>
+              </ul>
+            </details>
+
+            {/* Savings */}
+            <details>
+              <summary>Savings</summary>
+              <ul className="p-2 border-2 border-green-500">
+                <li>
+                  <a className=" lg:px-3 lg:py-2 bg-transparent  hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                    My contribution
+                  </a>
+                </li>
+                <li>
+                  <a className=" lg:px-3 lg:py-2 bg-transparent hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                    View withdrawls
+                  </a>
+                </li>
+              </ul>
+            </details>
+
+            {/* Investments */}
+            <details>
+              <summary>Savings</summary>
+              <ul className="p-2 border-2 border-green-500">
+                <li>
+                  <a className=" lg:px-3 lg:py-2 bg-transparent  hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a className=" lg:px-3 lg:py-2 bg-transparent hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                    AI tips
+                  </a>
+                </li>
+              </ul>
+            </details>
+
+            {/* Community */}
+            <details>
+              <summary>Savings</summary>
+              <ul className="p-2 border-2 border-green-500">
+                <li>
+                  <a className=" lg:px-3 lg:py-2 bg-transparent  hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                    Leaderboard
+                  </a>
+                </li>
+                <li>
+                  <a className=" lg:px-3 lg:py-2 bg-transparent hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+                    Forum
+                  </a>
+                </li>
+              </ul>
+            </details>
+          </ul>
+        </div>
+        <div className="navbar-end gap-2">
+          <NavLink
+            className="p-2 lg:px-5 lg:py-2 bg-transparent border-2 border-green-500 hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl "
+            to="login"
+          >
+            Login{" "}
+          </NavLink>
+          <NavLink
+            className="p-2 lg:px-5 lg:py-2 bg-transparent border-2 border-green-500 hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl "
+            to="register"
+          >
+            Register{" "}
+          </NavLink>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Navbar;
