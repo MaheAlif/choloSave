@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { NavLink } from "react-router";
 
 const JoinedGroups = () => {
   return (
@@ -45,8 +46,19 @@ const JoinedGroups = () => {
               {/* Group Info */}
               <div className="w-7/12 bg-slate-200 p-2 lg:p-5 rounded-lg">
                 {/* Group name */}
-                <h1 className="text-2xl lg:text-3xl font-bold text-green-600">Goal Settlers</h1>
-                <p className="text-xs lg:text-sm text-gray-800">Our goal is to raise $10,000 in 30 days, with funds allocated to. Backers will receive tiered rewards, such as early access or exclusive merchandise. We’ll share our journey through engaging storytelling, visuals, and updates, using social media and community outreach to amplify our message. Transparency will be maintained throughout, ensuring backers see the impact of their contributions and receive their rewards on time.</p>
+                <h1 className="text-2xl lg:text-3xl font-bold text-green-600">
+                  Goal Settlers
+                </h1>
+                <p className="text-xs lg:text-sm text-gray-800">
+                  Our goal is to raise $10,000 in 30 days, with funds allocated
+                  to. Backers will receive tiered rewards, such as early access
+                  or exclusive merchandise. We’ll share our journey through
+                  engaging storytelling, visuals, and updates, using social
+                  media and community outreach to amplify our message.
+                  Transparency will be maintained throughout, ensuring backers
+                  see the impact of their contributions and receive their
+                  rewards on time.
+                </p>
               </div>
 
               {/* Group inside info & join */}
@@ -55,9 +67,10 @@ const JoinedGroups = () => {
                 <p>Scheme : Weekly</p>
                 <p>Members : 32/50</p>
                 <div className="flex justify-center">
-                <button className="p-3 w-6/12 text-bold bg-green-400 rounded-lg hover:bg-green-700 hover:text-white">View</button>
+                  <button className="p-3 w-6/12 text-bold bg-green-400 rounded-lg hover:bg-green-700 hover:text-white">
+                    View
+                  </button>
                 </div>
-
               </div>
             </div>
 
@@ -73,8 +86,19 @@ const JoinedGroups = () => {
               {/* Group Info */}
               <div className="w-7/12 bg-slate-200 p-2 lg:p-5 rounded-lg">
                 {/* Group name */}
-                <h1 className="text-2xl lg:text-3xl font-bold text-green-600">Goal Settlers</h1>
-                <p className="text-xs lg:text-sm text-gray-800">Our goal is to raise $10,000 in 30 days, with funds allocated to. Backers will receive tiered rewards, such as early access or exclusive merchandise. We’ll share our journey through engaging storytelling, visuals, and updates, using social media and community outreach to amplify our message. Transparency will be maintained throughout, ensuring backers see the impact of their contributions and receive their rewards on time.</p>
+                <h1 className="text-2xl lg:text-3xl font-bold text-green-600">
+                  Goal Settlers
+                </h1>
+                <p className="text-xs lg:text-sm text-gray-800">
+                  Our goal is to raise $10,000 in 30 days, with funds allocated
+                  to. Backers will receive tiered rewards, such as early access
+                  or exclusive merchandise. We’ll share our journey through
+                  engaging storytelling, visuals, and updates, using social
+                  media and community outreach to amplify our message.
+                  Transparency will be maintained throughout, ensuring backers
+                  see the impact of their contributions and receive their
+                  rewards on time.
+                </p>
               </div>
 
               {/* Group inside info & join */}
@@ -83,9 +107,10 @@ const JoinedGroups = () => {
                 <p>Scheme : Weekly</p>
                 <p>Members : 32/50</p>
                 <div className="flex justify-center">
-                <button className="p-3 w-6/12 text-bold bg-green-400 rounded-lg hover:bg-green-700 hover:text-white">View</button>
+                  <button className="p-3 w-6/12 text-bold bg-green-400 rounded-lg hover:bg-green-700 hover:text-white">
+                    View
+                  </button>
                 </div>
-
               </div>
             </div>
 
@@ -101,8 +126,19 @@ const JoinedGroups = () => {
               {/* Group Info */}
               <div className="w-7/12 bg-slate-200 p-2 lg:p-5 rounded-lg">
                 {/* Group name */}
-                <h1 className="text-2xl lg:text-3xl font-bold text-green-600">Goal Settlers</h1>
-                <p className="text-xs lg:text-sm text-gray-800">Our goal is to raise $10,000 in 30 days, with funds allocated to. Backers will receive tiered rewards, such as early access or exclusive merchandise. We’ll share our journey through engaging storytelling, visuals, and updates, using social media and community outreach to amplify our message. Transparency will be maintained throughout, ensuring backers see the impact of their contributions and receive their rewards on time.</p>
+                <h1 className="text-2xl lg:text-3xl font-bold text-green-600">
+                  Goal Settlers
+                </h1>
+                <p className="text-xs lg:text-sm text-gray-800">
+                  Our goal is to raise $10,000 in 30 days, with funds allocated
+                  to. Backers will receive tiered rewards, such as early access
+                  or exclusive merchandise. We’ll share our journey through
+                  engaging storytelling, visuals, and updates, using social
+                  media and community outreach to amplify our message.
+                  Transparency will be maintained throughout, ensuring backers
+                  see the impact of their contributions and receive their
+                  rewards on time.
+                </p>
               </div>
 
               {/* Group inside info & join */}
@@ -111,9 +147,10 @@ const JoinedGroups = () => {
                 <p>Scheme : Weekly</p>
                 <p>Members : 32/50</p>
                 <div className="flex justify-center">
-                <button className="p-3 w-6/12 text-bold bg-green-400 rounded-lg hover:bg-green-700 hover:text-white">View</button>
+                  <button className="p-3 w-6/12 text-bold bg-green-400 rounded-lg hover:bg-green-700 hover:text-white">
+                    View
+                  </button>
                 </div>
-
               </div>
             </div>
 
@@ -129,8 +166,19 @@ const JoinedGroups = () => {
               {/* Group Info */}
               <div className="w-7/12 bg-slate-200 p-2 lg:p-5 rounded-lg">
                 {/* Group name */}
-                <h1 className="text-2xl lg:text-3xl font-bold text-green-600">Goal Settlers</h1>
-                <p className="text-xs lg:text-sm text-gray-800">Our goal is to raise $10,000 in 30 days, with funds allocated to. Backers will receive tiered rewards, such as early access or exclusive merchandise. We’ll share our journey through engaging storytelling, visuals, and updates, using social media and community outreach to amplify our message. Transparency will be maintained throughout, ensuring backers see the impact of their contributions and receive their rewards on time.</p>
+                <h1 className="text-2xl lg:text-3xl font-bold text-green-600">
+                  Goal Settlers
+                </h1>
+                <p className="text-xs lg:text-sm text-gray-800">
+                  Our goal is to raise $10,000 in 30 days, with funds allocated
+                  to. Backers will receive tiered rewards, such as early access
+                  or exclusive merchandise. We’ll share our journey through
+                  engaging storytelling, visuals, and updates, using social
+                  media and community outreach to amplify our message.
+                  Transparency will be maintained throughout, ensuring backers
+                  see the impact of their contributions and receive their
+                  rewards on time.
+                </p>
               </div>
 
               {/* Group inside info & join */}
@@ -139,9 +187,10 @@ const JoinedGroups = () => {
                 <p>Scheme : Weekly</p>
                 <p>Members : 32/50</p>
                 <div className="flex justify-center">
-                <button className="p-3 w-6/12 text-bold bg-green-400 rounded-lg hover:bg-green-700 hover:text-white">View</button>
+                  <button className="p-3 w-6/12 text-bold bg-green-400 rounded-lg hover:bg-green-700 hover:text-white">
+                    View
+                  </button>
                 </div>
-
               </div>
             </div>
 
@@ -157,8 +206,19 @@ const JoinedGroups = () => {
               {/* Group Info */}
               <div className="w-7/12 bg-slate-200 p-2 lg:p-5 rounded-lg">
                 {/* Group name */}
-                <h1 className="text-2xl lg:text-3xl font-bold text-green-600">Goal Settlers</h1>
-                <p className="text-xs lg:text-sm text-gray-800">Our goal is to raise $10,000 in 30 days, with funds allocated to. Backers will receive tiered rewards, such as early access or exclusive merchandise. We’ll share our journey through engaging storytelling, visuals, and updates, using social media and community outreach to amplify our message. Transparency will be maintained throughout, ensuring backers see the impact of their contributions and receive their rewards on time.</p>
+                <h1 className="text-2xl lg:text-3xl font-bold text-green-600">
+                  Goal Not Settlers
+                </h1>
+                <p className="text-xs lg:text-sm text-gray-800">
+                  Our goal is to raise $10,000 in 30 days, with funds allocated
+                  to. Backers will receive tiered rewards, such as early access
+                  or exclusive merchandise. We’ll share our journey through
+                  engaging storytelling, visuals, and updates, using social
+                  media and community outreach to amplify our message.
+                  Transparency will be maintained throughout, ensuring backers
+                  see the impact of their contributions and receive their
+                  rewards on time.
+                </p>
               </div>
 
               {/* Group inside info & join */}
@@ -167,9 +227,13 @@ const JoinedGroups = () => {
                 <p>Scheme : Weekly</p>
                 <p>Members : 32/50</p>
                 <div className="flex justify-center">
-                <button className="p-3 w-6/12 text-bold bg-green-400 rounded-lg hover:bg-green-700 hover:text-white">View</button>
+                  <NavLink
+                    to="groupDashboard"
+                    className="p-3 w-6/12 text-bold bg-green-400 rounded-lg hover:bg-green-700 hover:text-white"
+                  >
+                    View
+                  </NavLink>
                 </div>
-
               </div>
             </div>
 
@@ -185,8 +249,19 @@ const JoinedGroups = () => {
               {/* Group Info */}
               <div className="w-7/12 bg-slate-200 p-2 lg:p-5 rounded-lg">
                 {/* Group name */}
-                <h1 className="text-2xl lg:text-3xl font-bold text-green-600">Goal Settlers</h1>
-                <p className="text-xs lg:text-sm text-gray-800">Our goal is to raise $10,000 in 30 days, with funds allocated to. Backers will receive tiered rewards, such as early access or exclusive merchandise. We’ll share our journey through engaging storytelling, visuals, and updates, using social media and community outreach to amplify our message. Transparency will be maintained throughout, ensuring backers see the impact of their contributions and receive their rewards on time.</p>
+                <h1 className="text-2xl lg:text-3xl font-bold text-green-600">
+                  Goal Settlers
+                </h1>
+                <p className="text-xs lg:text-sm text-gray-800">
+                  Our goal is to raise $10,000 in 30 days, with funds allocated
+                  to. Backers will receive tiered rewards, such as early access
+                  or exclusive merchandise. We’ll share our journey through
+                  engaging storytelling, visuals, and updates, using social
+                  media and community outreach to amplify our message.
+                  Transparency will be maintained throughout, ensuring backers
+                  see the impact of their contributions and receive their
+                  rewards on time.
+                </p>
               </div>
 
               {/* Group inside info & join */}
@@ -195,12 +270,12 @@ const JoinedGroups = () => {
                 <p>Scheme : Weekly</p>
                 <p>Members : 32/50</p>
                 <div className="flex justify-center">
-                <button className="p-3 w-6/12 text-bold bg-green-400 rounded-lg hover:bg-green-700 hover:text-white">View</button>
+                  <button className="p-3 w-6/12 text-bold bg-green-400 rounded-lg hover:bg-green-700 hover:text-white">
+                    View
+                  </button>
                 </div>
-
               </div>
-            </div>            
-
+            </div>
           </div>
         </div>
       </section>

@@ -10,8 +10,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md">
-      <div className="container mx-auto px-4 flex justify-between items-center py-4">
+    <div className="bg-white shadow-md">
+      <div className=" mx-auto px-4 flex   lg:flex-row justify-between items-center py-4">
         <div className="flex items-center space-x-2">
           <img src={CholoSaveLogo} alt="CholoSave" className="w-10" />
           <NavLink to="" className="btn btn-ghost text-xl lg:text-3xl">
@@ -283,7 +283,7 @@ const Navbar = () => {
         </div>
 
       </div>
-    </nav>
+    </div>
   );
 };
 
