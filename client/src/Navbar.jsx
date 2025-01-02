@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router";
 import CholoSaveLogo from "/CholoSaveLogo4.png";
+import { GrGroup  } from "react-icons/gr";
+import { MdOutlineStreetview , MdOutlineLeaderboard } from "react-icons/md";
+import { FaUsersViewfinder } from "react-icons/fa6";
+import { PiHandWithdrawBold , PiHandDepositBold } from "react-icons/pi";
+import { RxDashboard } from "react-icons/rx";
+import { LuBrainCircuit } from "react-icons/lu";
+import { RiCommunityLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState(null);
@@ -52,8 +59,8 @@ const Navbar = () => {
                   <ul className="py-2">
                     <li>
                       <NavLink to="createGroup" className="block px-4 py-2 hover:bg-gray-100">
-                        <div className="font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
-                          Create Group
+                        <div className="flex gap-2 font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
+                          <GrGroup className="mt-1 ml-1"></GrGroup>Create Group
                         </div>
                         <span className="text-sm text-gray-500">
                           Create your group to connect with people
@@ -62,8 +69,8 @@ const Navbar = () => {
                     </li>
                     <li>
                       <NavLink to="myGroups" className="block px-4 py-2 hover:bg-gray-100">
-                        <div className="font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
-                          View Groups
+                        <div className="flex  gap-2 font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
+                          <MdOutlineStreetview className="mt-1 ml-1"></MdOutlineStreetview> View Groups
                         </div>
                         <span className="text-sm text-gray-500">
                           View details of your groups
@@ -72,8 +79,8 @@ const Navbar = () => {
                     </li>
                     <li>
                       <NavLink to="joinedGroups" className="block px-4 py-2 hover:bg-gray-100">
-                        <div className="font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
-                          My groups
+                        <div className="flex gap-2  font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
+                          <FaUsersViewfinder className="mt-1 ml-1"></FaUsersViewfinder>My groups
                         </div>
                         <span className="text-sm text-gray-500">
                           See the details of your created groups
@@ -116,8 +123,8 @@ const Navbar = () => {
                   <ul className="py-2">
                     <li>
                       <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                        <div className="font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
-                          Withdrawls
+                        <div className="flex gap-2 font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
+                          <PiHandWithdrawBold className="mt-1 ml-1"></PiHandWithdrawBold> Withdrawls
                         </div>
                         <span className="text-sm text-gray-500">
                           See the details of your withdrawls
@@ -126,8 +133,8 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                        <div className="font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
-                          Contributions
+                        <div className="flex gap-2 font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
+                          <PiHandDepositBold className="mt-1 ml-1"></PiHandDepositBold>Contributions
                         </div>
                         <span className="text-sm text-gray-500">
                           See the details of your contributions
@@ -170,8 +177,8 @@ const Navbar = () => {
                   <ul className="py-2">
                     <li>
                       <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                        <div className="font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
-                          Dashboard
+                        <div className="flex gap-2 font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
+                          <RxDashboard className="mt-1 ml-1"></RxDashboard>Dashboard
                         </div>
                         <span className="text-sm text-gray-500">
                           View the details of your investments
@@ -180,8 +187,8 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                        <div className="font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
-                          AI tips
+                        <div className="flex gap-2 font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
+                          <LuBrainCircuit className="mt-1 ml-1"></LuBrainCircuit>AI tips
                         </div>
                         <span className="text-sm text-gray-500">
                           Get specific tips based on your requirments
@@ -224,8 +231,8 @@ const Navbar = () => {
                   <ul className="py-2">
                     <li>
                       <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                        <div className="font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
-                          Leaderboard
+                        <div className="flex gap-2 font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
+                          <MdOutlineLeaderboard className="mt-1 ml-1"></MdOutlineLeaderboard>Leaderboard
                         </div>
                         <span className="text-sm text-gray-500">
                           View all the contributors
@@ -234,8 +241,8 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                        <div className="font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
-                          Forums
+                        <div className="flex gap-2 font-semibold bg-green-300 p-1 rounded-lg hover:bg-green-600 hover:text-white">
+                          <RiCommunityLine className="mt-1 ml-1"></RiCommunityLine>Forums
                         </div>
                         <span className="text-sm text-gray-500">
                           Get connected with other people in the community
