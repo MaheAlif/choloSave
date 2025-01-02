@@ -10,7 +10,7 @@ import CreateGroup from "./Group/CreateGroup.jsx";
 import { ThemeProvider } from "@material-tailwind/react";
 import MyGroups from "./Group/MyGroups.jsx";
 import JoinedGroups from "./Group/JoinedGroups.jsx";
-import GroupDashboard from "./Group/GroupDashboard.jsx";
+import GroupDashboard from "./Group/ViewGroupData/GroupDashboard.jsx";
 
 const root = document.getElementById("root");
 
@@ -26,7 +26,7 @@ ReactDOM.createRoot(root).render(
           <Route path="createGroup" element={<CreateGroup></CreateGroup>} />
           <Route path="myGroups" element={<MyGroups></MyGroups>} />
           <Route path="joinedGroups" element={<JoinedGroups></JoinedGroups>} />
-          <Route path="joinedGroups/groupDashboard" element={<GroupDashboard></GroupDashboard>} />
+          <Route path="/groupDashboard/:id" element={<GroupDashboard></GroupDashboard>} />
         </Route>
       </Routes>
     </BrowserRouter>
