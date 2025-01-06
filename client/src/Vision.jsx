@@ -17,7 +17,7 @@ const Vision = () => {
         <div className="flex justify-center lg:p-2 w-full ">
           <div className="flex flex-col w-9/12  lg:p-10  lg:flex-row-reverse gap-2 lg:gap-5 justify-center align-middle glass rounded-2xl">
             <div className="lg:w-1/2 p-3 lg:ml-32 border-pink-400 flex flex-col gap-3 justify-center align-middle">
-              <h1 className="text-2xl lg:text-8xl font-bold text-white">
+              <h1 className="text-2xl lg:text-6xl font-bold text-white">
                 Our Vision
               </h1>
               <p className="text-sm lg:text-xl text-white font-normal">

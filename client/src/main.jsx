@@ -11,24 +11,27 @@ import { ThemeProvider } from "@material-tailwind/react";
 import MyGroups from "./Group/MyGroups.jsx";
 import JoinedGroups from "./Group/JoinedGroups.jsx";
 import GroupDashboard from "./Group/ViewGroupData/GroupDashboard.jsx";
+import ContextProvider from "./Provider/ContextProvider.jsx";
 
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
   <ThemeProvider>
-    <BrowserRouter>
-      <Routes>
-        <Route path="" element={<Dashboard />}>
-          <Route path="" element={<App />} />
-          <Route path="home" element={<Home />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register></Register>} />
-          <Route path="createGroup" element={<CreateGroup></CreateGroup>} />
-          <Route path="myGroups" element={<MyGroups></MyGroups>} />
-          <Route path="joinedGroups" element={<JoinedGroups></JoinedGroups>} />
-          <Route path="/groupDashboard/:id" element={<GroupDashboard></GroupDashboard>} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="" element={<Dashboard />}>
+            <Route path="" element={<App />} />
+            <Route path="home" element={<Home />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register></Register>} />
+            <Route path="createGroup" element={<CreateGroup></CreateGroup>} />
+            <Route path="myGroups" element={<MyGroups></MyGroups>} />
+            <Route path="joinedGroups" element={<JoinedGroups></JoinedGroups>} />
+            <Route path="/groupDashboard/:id" element={<GroupDashboard></GroupDashboard>} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ContextProvider>
   </ThemeProvider>
 );

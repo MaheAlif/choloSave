@@ -3,6 +3,7 @@ import DashCharts from "./InsideDashboard/DashCharts";
 import DashCard from "./InsideDashboard/DashCard";
 import DashCard2 from "./InsideDashboard/DashCard2";
 import { useParams } from "react-router";
+import DashboardSidebar from "./DashboardSidebar";
 
 const GroupDashboard = () => {
   const { id } = useParams(); // Get the group ID from the URL
@@ -10,7 +11,7 @@ const GroupDashboard = () => {
   // Simulated data
   const groupData = [
     {
-      id: 1,
+      id: 5,
       name: "Goal Settlers",
       description:
         "Our goal is to raise $10,000 in 30 days, with funds allocated to. Backers will receive tiered rewards, such as early access or exclusive merchandise.",
@@ -35,7 +36,7 @@ const GroupDashboard = () => {
       ],
     },
     {
-      id: 2,
+      id: 8,
       name: "Goal Not Settlers",
       description: "Our goal is to raise $15,000 in 20 days. Join us for an impactful journey.",
       installments: 700,
@@ -96,97 +97,7 @@ const GroupDashboard = () => {
     <>
       <div className="flex bg-gray-200">
         {/* Sidebar / Aside Menu */}
-        <aside className="min-w-64 bg-green-300 text-green-900 font-semibold flex flex-col">
-          <div className="p-4 text-2xl font-bold border-b border-blue-700">
-            Dashboard
-          </div>
-          <nav className="flex-1 p-4">
-            <ul className="space-y-4">
-              <li className="border-b-2 border-green-800">
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded-lg hover:bg-green-700 hover:text-white transition duration-300"
-                >
-                  Home
-                </a>
-              </li>
-              <li className="border-b-2 border-green-800">
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded-lg hover:bg-green-700 hover:text-white transition duration-300"
-                >
-                  Emergency Loan Request
-                </a>
-              </li>
-              <li className="border-b-2 border-green-800">
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded-lg hover:bg-green-700 hover:text-white transition duration-300"
-                >
-                  Loan History
-                </a>
-              </li>
-
-              <li className="border-b-2 border-green-800">
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded-lg hover:bg-green-700 hover:text-white transition duration-300"
-                >
-                  Chats
-                </a>
-              </li>
-              <li className="border-b-2 border-green-800">
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded-lg hover:bg-green-700 hover:text-white transition duration-300"
-                >
-                  Members
-                </a>
-              </li>
-              <li className="border-b-2 border-green-800">
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded-lg hover:bg-green-700 hover:text-white transition duration-300"
-                >
-                  Payment
-                </a>
-              </li>
-              <li className="border-b-2 border-green-800">
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded-lg hover:bg-green-700 hover:text-white transition duration-300"
-                >
-                  Payment History
-                </a>
-              </li>
-              <li className="border-b-2 border-green-800">
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded-lg hover:bg-green-700 hover:text-white transition duration-300"
-                >
-                  Withdraw request
-                </a>
-              </li>
-              <li className="border-b-2 border-green-800">
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded-lg hover:bg-pink-400 hover:text-white transition duration-300"
-                >
-                  Leave Request
-                </a>
-              </li>
-              <li className="border-b-2 border-green-800">
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded-lg hover:bg-green-700 hover:text-white transition duration-300"
-                >
-                  Analytics
-                </a>
-              </li>
-              
-            </ul>
-          </nav>
-        </aside>
+        <DashboardSidebar></DashboardSidebar>
 
         {/* Main Content */}
         <main className="flex flex-col gap-5 w-full p-6">

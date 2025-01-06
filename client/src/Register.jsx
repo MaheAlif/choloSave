@@ -1,30 +1,129 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "animate.css/animate.min.css";
-import { NavLink } from "react-router"; // Correct import
+import { NavLink, useNavigate } from "react-router"; // Correct import
 import BgImage from "/LoginBg.png"; // Importing image
 import { FcGoogle } from "react-icons/fc";
+import Swal from "sweetalert2";
+import { userContext } from "./Provider/ContextProvider";
 
 const Register = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState(0);
+  const [password, setPassword] = useState("");
+
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Getting context from contextProvider to set current user
+  const { setUser } = useContext(userContext);
+
+  // setting up navigation for after registration done!!!
+  const navigate = useNavigate();
+
+  // console.log(
+  //   "Inside register : ",
+  //   name,
+  //   " => ",
+  //   phoneNumber,
+  //   " => ",
+  //   email,
+  //   " => ",
+  //   password
+  // );
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setErrorMessage("");
+
+    // Sending user data to database
+    try {
+      const response = await fetch(
+        "http://localhost/CholoSave_Backend/api/register.php",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            email,
+            phone_number: phoneNumber.toString(),
+            password,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log("Registration successful:", data);
+        Swal.fire({
+          title: "Success!",
+          text: "Registered successfully!",
+          icon: "success",
+          confirmButtonText: "Continue",
+        });
+
+        setUser(data); // Save user data in context
+        navigate("/login"); // Redirect to the homepage
+      } else {
+        console.log("Registration failed:", data);
+        setErrorMessage(
+          data.message || "Failed to register. Please try again."
+        );
+      }
+    } catch (error) {
+      console.error("Error during register:", error);
+      setErrorMessage("Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <>
       <div className="animate__animated animate__backInDown">
         <div className="hero bg-slate-100 min-h-screen">
-          <div className="hero-content flex flex-col lg:flex-row items-center justify-center w-full max-w-4xl">
+          <div className="hero-content min-h-full flex flex-col lg:flex-row items-center justify-center w-full max-w-4xl">
             {/* Image box */}
             <div className="w-full h-full flex justify-center items-center bg-base-100 border border-gray-300 rounded-lg shadow-lg">
               <img
                 src={BgImage}
                 alt="Login Background"
-                className="w-full max-h-[300px] lg:max-h-[600px] object-cover rounded-lg"
+                className="w-full max-h-[300px] lg:min-h-[800px] object-cover rounded-lg"
               />
             </div>
 
             {/* Form box */}
-            <div className="w-full lg:h-[600px] bg-slate-300 border border-gray-300 rounded-lg shadow-2xl">
+            <div className="w-full lg:h-[800px] bg-slate-300 border border-gray-300 rounded-lg shadow-2xl">
               <h1 className="text-4xl font-semibold text-center text-[#3ed268] p-5">
                 Register
               </h1>
-              <form className="card-body">
+              <form className="card-body" onSubmit={handleRegister}>
+                <div className="form-control animate__animated animate__fadeInLeft animate__delay-1s">
+                  <label className="label">
+                    <span className="label-text">Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="name"
+                    className="input input-bordered"
+                    required
+                    onChange={(event) => setName(event.target.value)}
+                  />
+                </div>
+                <div className="form-control animate__animated animate__fadeInLeft animate__delay-1s">
+                  <label className="label">
+                    <span className="label-text">Phone number</span>
+                  </label>
+                  <input
+                    type="number"
+                    placeholder="phone number"
+                    className="input input-bordered"
+                    required
+                    onChange={(event) => setPhoneNumber(event.target.value)}
+                  />
+                </div>
                 <div className="form-control animate__animated animate__fadeInLeft animate__delay-1s">
                   <label className="label">
                     <span className="label-text">Email</span>
@@ -34,6 +133,7 @@ const Register = () => {
                     placeholder="email"
                     className="input input-bordered"
                     required
+                    onChange={(event) => setEmail(event.target.value)}
                   />
                 </div>
 
@@ -46,6 +146,7 @@ const Register = () => {
                     placeholder="password"
                     className="input input-bordered"
                     required
+                    onChange={(event) => setPassword(event.target.value)}
                   />
                   <label className="label">
                     <a href="#" className="label-text-alt link link-hover">
@@ -55,8 +156,24 @@ const Register = () => {
                 </div>
 
                 <div className="form-control mt-6 animate__animated animate__fadeInLeft animate__delay-3s">
-                  <button className="btn btn-primary  w-full">Register</button>
+                  {errorMessage && (
+                    <div className="text-red-500 text-center my-2">
+                      {errorMessage}
+                    </div>
+                  )}
+
+                  <div className="form-control mt-6">
+                    <button
+                      type="submit"
+                      className={`btn btn-primary w-full ${
+                        isLoading ? "btn-disabled" : ""
+                      }`}
+                    >
+                      {isLoading ? "Registerring in..." : "Register"}
+                    </button>
+                  </div>
                 </div>
+
                 <div className="text-center">
                   <p>Already registered? Then Login here</p>
                   <div className="animate__animated animate__tada animate__delay-4s">

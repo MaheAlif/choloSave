@@ -1,64 +1,85 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect, useContext } from "react";
+import { userContext } from "../Provider/ContextProvider";
 import JoinedGroupCard from "./JoinedGroup/JoinedGroupCard";
 
-const JoinedGroups = () => {
+const JoinedGroup = () => {
   const [groupData, setGroupData] = useState([]);
   const [error, setError] = useState(null);
+  const [searchTerm, setSearchTerm] = useState(""); // New state for search
+  const { user } = useContext(userContext);
 
   useEffect(() => {
-    fetch("groupData.json")
+    if (!user?.data?.id) {
+      setError("User not logged in.");
+      return;
+    }
+
+    fetch("http://localhost/CholoSave_Backend/api/get_groups.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ user_id: user.data.id }),
+    })
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Failed to load data in JoinedGroups component");
+          throw new Error("Failed to fetch groups");
         }
         return response.json();
       })
-      .then((data) => setGroupData(data))
-      .catch((err) => setError(err.message));
-  }, []);
+      .then((data) => {
+        if (data.status === "success") {
+          setGroupData(data.groups || []);
+        } else {
+          setError(data.message || "Failed to fetch groups.");
+        }
+      })
+      .catch((err) => {
+        setError(err.message || "Something went wrong.");
+      });
+  }, [user]);
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  } else {
-    console.log(groupData)
-  }
+  const filteredGroups = groupData.filter((group) =>
+    group.group_name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <section className="max-w-[1024px] mx-auto">
-      <div>
-        {/* Search */}
-        <div className="flex justify-center gap-2 p-5">
-          <div>
-            <input
-              className="input input-bordered join-item"
-              placeholder="Search"
-            />
-          </div>
-          <select className="select select-bordered join-item">
-            <option disabled selected>
-              Filter
-            </option>
-            <option>Sci-fi</option>
-            <option>Drama</option>
-            <option>Action</option>
-          </select>
-          <div className="indicator">
-            <button className="bg-green-300 p-3 font-semibold rounded-lg hover:bg-green-700 hover:text-white">
-              Search
-            </button>
-          </div>
-        </div>
+      {/* Search Bar */}
+      <div className="flex justify-center gap-2 p-5">
+        <input
+          className="input input-bordered join-item"
+          placeholder="Search"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)} // Update searchTerm
+        />
+        <select className="select select-bordered join-item">
+          <option disabled selected>
+            Filter
+          </option>
+          <option>Weekly</option>
+          <option>Monthly</option>
+        </select>
+        <button className="bg-green-300 p-3 font-semibold rounded-lg hover:bg-green-700 hover:text-white">
+          Search
+        </button>
+      </div>
 
-        {/* Groups */}
-        <div className="flex flex-col gap-3">
-          {groupData.map((group, index) => (
-            // console.log(group)
-            <JoinedGroupCard key={group.id} group={group}></JoinedGroupCard>
-          ))}
-        </div>
+      {/* Error Message */}
+      {error && <p className="text-red-500 text-center">{error}</p>}
+
+      {/* Groups */}
+      <div className="flex flex-col gap-3">
+        {filteredGroups.length > 0 ? (
+          filteredGroups.map((group) => (
+            <JoinedGroupCard key={group.group_id} group={group} />
+          ))
+        ) : (
+          <p className="text-center text-gray-600">No groups available.</p>
+        )}
       </div>
     </section>
   );
 };
 
-export default JoinedGroups;
+export default JoinedGroup;

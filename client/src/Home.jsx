@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <div
         id="home"
-        className="py-3 mt-2 border  border-purple-500 bg-gradient-to-r from-indigo-900 via-purple-500 to-pink-500 bg-opacity-5 "
+        className="py-3   border-purple-500 bg-gradient-to-r from-indigo-900 via-purple-500 to-pink-500 bg-opacity-5 "
         style={{
           backgroundImage: { HomeBg2 },
         }}
